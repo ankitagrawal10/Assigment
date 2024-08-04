@@ -29,7 +29,7 @@ export const Signup = async (req, res) => {
         _id: createdUser._id,
         fullName: createdUser.fullName,
         email: createdUser.email,
-        role:createdUser.role,
+        role: createdUser.role,
       },
     });
   } catch (error) {
@@ -53,6 +53,7 @@ export const login = async (req, res) => {
           _id: user._id,
           fullName: user.fullName,
           email: user.email,
+          role: user.role,
         },
       });
     }
@@ -71,3 +72,7 @@ export const logout = async (req, res) => {
     res.status(500).json({ error: "internal server error" });
   }
 };
+
+export const getuser = async(req,res)=>{
+  res.json({ user: req.user });
+}
