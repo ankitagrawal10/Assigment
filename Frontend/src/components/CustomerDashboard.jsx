@@ -9,7 +9,7 @@ function CustomerDashboard() {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/product/getallProduct"
+          "https://assigment-sable.vercel.app/getallProduct"
         );
         console.log("API Response:", response.data);
         setProducts(response.data || []);

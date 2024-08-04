@@ -1,8 +1,8 @@
-# React + Vite
+To implement the two sections—customer and admin—with the roles and functionalities described, here’s how you can structure and correct any mistakes:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Customer Role:
+UI Features: Get all products, get featured products.
+Permissions: Can only view products.
+2. Admin Role:
+UI Features: Add product, update product, delete product.
+Permissions: Full CRUD operations on products.

@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/user/getcurrentuser");
+        const res = await axios.get("https://assigment-sable.vercel.app/getcurrentuser");
         setUser(res.data.user);
       } catch (err) {
         setUser(null);
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:3000/user/login", {
+      const res = await axios.post("https://assigment-sable.vercel.app/user/login", {
         email,
         password,
       });
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (fullName, email, password, role) => {
     try {
-      await axios.post("http://localhost:3000/user/signup", {
+      await axios.post("https://assigment-sable.vercel.app/user/signup", {
         fullName,
         email,
         password,
@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await axios.post("http://localhost:3000/user/logout");
+    await axios.post("https://assigment-sable.vercel.app/user/logout");
     setUser(null);
     navigate("/");
   };
