@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get("https://assigment-sable.vercel.app/getcurrentuser");
+        const res = await axios.get("https://assigment-sable.vercel.app/user/getcurrentuser");
         setUser(res.data.user);
       } catch (err) {
         setUser(null);
