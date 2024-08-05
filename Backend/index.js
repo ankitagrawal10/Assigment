@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://assigment-7tit.vercel.app/"],
+    origin: "*",
     credentials: true,
   })
 );
